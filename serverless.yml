@@ -1,0 +1,25 @@
+
+service: Lambda
+frameworkVersion: "3"
+provider:
+  name: aws
+  region: ap-south-1
+
+custom:
+  environment: ${opt:stage,"dev"}
+
+plugins:
+  - serverless-ignore
+
+functions:
+  updateUser:
+    handler: scripts/updateUser.updateUser
+    name: lambda-${self:custom.environment}-updateUser
+    events:
+      - eventBridge:
+          enabled: true
+          name: updateUserChatStatusLambda
+          description: to update users chatStaus to online in a given time
+          schedule: rate(1 minute)
+          input:
+            test: test-event-body

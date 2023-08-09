@@ -1,0 +1,23 @@
+{
+  "name": "aws-lambda-serverless-cicd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [
+    "lambda",
+    "serverless",
+    "workflows",
+    "cicd",
+    "aws"
+  ],
+  "author": "Rohit Jadhav",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "mongoose": "^7.4.2"
+  },
+  "devDependencies": {
+    "aws-sdk": "^2.1432.0",
+    "serverless-ignore": "^0.2.1"
+  }
+}
