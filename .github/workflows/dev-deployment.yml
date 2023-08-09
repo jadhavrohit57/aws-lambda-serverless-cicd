@@ -1,9 +1,9 @@
 # This workflow will build and push a new container image to Amazon ECR
-on:
-  workflow_dispatch:
-  push:
-    branches:
-      - alpha
+# on:
+#   workflow_dispatch:
+#   push:
+#     branches:
+#       - alpha
 
 name: Deploy to Amazon ECS
 
